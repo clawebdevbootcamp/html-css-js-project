@@ -1,0 +1,74 @@
+@import url(assets/fonts/Roboto-Regular.ttf);
+@import url(assets/fonts/Roboto-Bold.ttf);
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgb(24, 25, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+main section:first-child {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+}
+
+main section:first-child .right {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  aspect-ratio: 0.67/1;
+  border-radius: 12px;
+  background-image: url("assets/images/illustration-sign-up-desktop.svg");
+}
+
+main section:first-child .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main section:first-child .left ul {
+  list-style: none;
+}
+
+main section:first-child .left ul li {
+  margin: 12px 0;
+  /* Appraoch 1 (the good one) */
+  list-style-image: url("assets/images/icon-list.svg");
+}
+
+main section:first-child .left ul li .icon {
+  /* Appraoch 2 (the good one) + giving the parent relative position + removing display: none; here */
+  display: none;
+  height: 15px;
+  width: 15px;
+  background-color: blue;
+  border-radius: 15px;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+main section:last-child {
+  display: none;
+}
