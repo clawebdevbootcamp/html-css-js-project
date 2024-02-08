@@ -50,7 +50,10 @@
             </li>
           </ul>
           <div>
-            <label for="email">Email address</label>
+            <label for="email-input" style="display: flex; justify-content: space-between;">
+              <span>Email address</span>
+              <div id="is-required-indicator">Valid email required</div>
+            </label>
             <input
               type="email"
               name="email"
@@ -58,7 +61,7 @@
               placeholder="email@company.com"
             />
           </div>
-          <button>Subscribe to monthly newsletter</button>
+          <button id="subscribe-btn">Subscribe to monthly newsletter</button>
         </div>
         <div class="right"></div>
       </section>
@@ -68,14 +71,13 @@
       <!-- Success message start -->
 
       <section>
-        <div></div>
-        <h2>Thanks for subscribing!</h2>
-        <p>
-          A confirmation email has been sent to <b>ash@loremcompany.com</b>.
-          Please open it and click the button inside to confirm your
-          subscription.
-        </p>
-        <button>Dismiss message</button>
+        <img src="./assets/images/icon-list.svg"/>
+        <h1>Thanks for subscribing!</h1>
+        <div>
+          A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.<br>
+          Please open it and click the button inside to confirm your subscription.
+        </div>
+        <button id="dismiss-btn">Dismiss message</button>
       </section>
 
       <!-- Success message end -->
