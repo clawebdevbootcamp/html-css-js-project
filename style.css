@@ -69,8 +69,6 @@ main section:first-child .left ul li .icon {
   transform: translateY(-50%);
 }
 
-
-
 /* Email input */
 #email {
   width: calc(100% - 1.5rem); /* Adjust the padding and margin */
@@ -104,18 +102,23 @@ main section:first-child .left ul li .icon {
 
 /* a class that can be added or deleted dynamically */
 .email-invalid {
-  border-color: hsl(0, 80%, 60%); /* Change border color for invalid input */
-  color: hsl(0, 80%, 60%);
-  background-color: hsl(0, 80%, 90%);
+  border-color: red; /* Change border color for invalid input */
+  color: red;
+  background-color: rgb(246, 173, 173);
 }
 .email-invalid:focus {
   box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2); /* Add a red shadow when focused */
-
 }
 /* An element that will be shown/hidden dynamically*/
-#is-required-indicator{
-  color: hsl(4, 80%, 60%);
+#error-text {
+  color: red;
   display: none;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* TODO: Styling of thanks page */
@@ -154,7 +157,6 @@ main section:last-child #dismiss-btn:hover {
   background-color: hsl(0, 80%, 60%);
   box-shadow: 0 0 8px hsl(0, 80%, 60%); /* Add box-shadow on hover */
 }
-
 
 /* Styling of the mobile version */
 @media screen and (max-width: 800px) {
